@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".respg2"></activity>
+        <activity android:name=".Profile2" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".Ecotip" />
         <activity android:name=".SecondActivity" />
