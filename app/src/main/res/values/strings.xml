@@ -96,4 +96,18 @@
     <string name="plastic">Plastic</string>
     <string name="water">Water</string>
     <string name="paper">Paper</string>
+
+    <string-array name="resourcesavedarrayfor_newsavingsproject_page1spinner">
+        <item>Resource #1</item>
+        <item>Resource #2</item>
+        <item>Resource #3</item>
+        <item>Resource #4</item>
+        <item>Resource #5</item>
+        <item>Resource #6</item>
+        <item>Resource #7</item>
+        <item>Resource #8</item>
+        <item>Resource #9</item>
+        <item>Resource #10</item>
+    </string-array>
+
 </resources>

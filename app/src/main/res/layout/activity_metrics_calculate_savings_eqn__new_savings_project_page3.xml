@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MetricsCalculateSavingsEqn_NewSavingsProject_page3">
+
+
+    <TextView
+        android:id="@+id/KeyMetricsPrompt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="46dp"
+        android:text="Key Metrics:\n(What are the key metrics that measure how much resource is saved by an individual action?)"
+        android:layout_marginLeft="34dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/KeyMetricEntry1"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/KeyMetricsPrompt"
+        android:layout_alignStart="@+id/KeyMetricsPrompt"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter key metric"
+        android:layout_alignLeft="@+id/KeyMetricsPrompt" />
+
+    <EditText
+        android:id="@+id/MetricEntry1Unit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/KeyMetricsPrompt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="unit"
+        android:layout_marginRight="26dp"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/KeyMetricEntry2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/MetricEntry1Unit"
+        android:layout_alignStart="@+id/KeyMetricsPrompt"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter key metric"
+        android:layout_alignLeft="@+id/KeyMetricsPrompt" />
+
+    <EditText
+        android:id="@+id/MetricEntry2Unit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/MetricEntry1Unit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="unit"
+        android:layout_marginRight="28dp"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/KeyMetricEntry3"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/MetricEntry2Unit"
+        android:layout_alignStart="@+id/KeyMetricsPrompt"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter key metric"
+        android:layout_alignLeft="@+id/KeyMetricsPrompt" />
+
+    <EditText
+        android:id="@+id/MetricEntry3Unit"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/MetricEntry2Unit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="unit"
+        android:layout_marginRight="28dp"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/CalculationEqnPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/KeyMetricsPrompt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="188dp"
+        android:text="Savings Equation: (using key metrics)"
+        android:layout_alignLeft="@+id/KeyMetricsPrompt" />
+
+    <EditText
+        android:id="@+id/CalculationEqnEntry"
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:layout_below="@+id/CalculationEqnPrompt"
+        android:layout_alignStart="@+id/KeyMetricsPrompt"
+        android:layout_marginTop="-188dp"
+        android:ems="10"
+        android:hint="Using key metrics, how do we calculate the amount of resources saved by 1 individual action?"
+        android:inputType="textMultiLine"
+        android:layout_alignLeft="@+id/KeyMetricsPrompt" />
+
+    <Button
+        android:id="@+id/LastButtonNewProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Create Project" />
+
+</RelativeLayout>
