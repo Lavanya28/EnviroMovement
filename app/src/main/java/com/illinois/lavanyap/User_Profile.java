@@ -1,9 +1,11 @@
 package com.illinois.lavanyap;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Profile2 extends AppCompatActivity {
+public class User_Profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

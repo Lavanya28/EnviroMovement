@@ -3,7 +3,7 @@ package com.illinois.lavanyap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class respg2 extends AppCompatActivity {
+public class Resource_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

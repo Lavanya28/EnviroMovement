@@ -4,6 +4,11 @@
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="Profile"/>
+    <item
+
+        android:id="@+id/navigation_resource"
+        android:icon="@drawable/ic_stat_name"
+        android:title="Resources"/>
 
     <item
         android:id="@+id/navigation_settings"

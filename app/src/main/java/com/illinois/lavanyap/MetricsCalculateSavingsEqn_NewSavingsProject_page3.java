@@ -22,7 +22,7 @@ public class MetricsCalculateSavingsEqn_NewSavingsProject_page3 extends Activity
         last_button_page3_newsavingsproject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(),  com.illinois.lavanyap.LoginPage.class);
+                Intent startIntent = new Intent(getApplicationContext(),  com.illinois.lavanyap.Login.class);
                 startActivity(startIntent);
             }
         });
@@ -31,7 +31,7 @@ public class MetricsCalculateSavingsEqn_NewSavingsProject_page3 extends Activity
 
     public void onClick(View v)  {
         if(v.getId() == R.id.LastButtonNewProject)  {
-            startActivity(new Intent(MetricsCalculateSavingsEqn_NewSavingsProject_page3.this,  com.illinois.lavanyap.LoginPage.class));
+            startActivity(new Intent(MetricsCalculateSavingsEqn_NewSavingsProject_page3.this,  com.illinois.lavanyap.Login.class));
 
             //TODO:
             //Change LoginPage in above line to the default home page/screen of our app!
