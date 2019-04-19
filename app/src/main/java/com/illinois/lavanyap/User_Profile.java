@@ -61,6 +61,8 @@ public class User_Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(User_Profile.this.getApplicationContext(), Projectcreate_page1.class);
+                //CHANGE THIS TO USER
+                startIntent.putExtra("username", "Mary");
                 User_Profile.this.startActivity(startIntent);
 
 
