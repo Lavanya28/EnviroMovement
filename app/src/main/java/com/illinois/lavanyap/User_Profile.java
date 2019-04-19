@@ -39,21 +39,18 @@ public class User_Profile extends AppCompatActivity {
         // Fetch List of Projects, Eco-points, total  corresponding to user from Profile table
 
         Bundle b = this.getIntent().getExtras();
-        String user = b.getString("username");
+        String user = "'"+b.getString("username")+"'";
 
 
-
-        String sel = "Carry reusable bags while grocery shopping";
-        // Doesnt work ---> any varchar element
-         //Cursor cursor = mydatabase2.rawQuery("SELECT * from UserTable where Password=" + "Pass1" ,null);
-
-        Cursor cursor = mydatabase2.rawQuery("SELECT * from ProfileTable where EcoPoints=" + "18" ,null);
+        //Fetch Eco points corresponding to User
+         Cursor cursor = mydatabase2.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
          cursor.moveToFirst();
-
-
-
-         String eco = cursor.getString(1);
+         String eco = cursor.getString(2);
          ecopoints.setText(eco);
+
+         //Fetch Total saved by User
+        String tot = cursor.getString(3);
+        total.setText(tot);
 
 
 
