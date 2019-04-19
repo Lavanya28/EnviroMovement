@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MotivationDescription_NewSavingsProject_page2 extends Activity implements View.OnClickListener {
+public class Projectcreate_page2 extends Activity implements View.OnClickListener {
 
 
     private Button next_button_page2_newsavingsproject;
@@ -14,13 +14,13 @@ public class MotivationDescription_NewSavingsProject_page2 extends Activity impl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_motivation_description__new_savings_project_page2);
+        setContentView(R.layout.projectcreate_page2);
 
         next_button_page2_newsavingsproject = (Button) findViewById(R.id.NextButton_Page2_NewSavingsProject);
         next_button_page2_newsavingsproject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), MetricsCalculateSavingsEqn_NewSavingsProject_page3.class);
+                Intent startIntent = new Intent(getApplicationContext(), Projectcreate_page3.class);
                 startActivity(startIntent);
             }
         });
@@ -29,7 +29,7 @@ public class MotivationDescription_NewSavingsProject_page2 extends Activity impl
 
     public void onClick(View v)  {
         if(v.getId() == R.id.NextButton_Page2_NewSavingsProject)  {
-            startActivity(new Intent(MotivationDescription_NewSavingsProject_page2.this, MetricsCalculateSavingsEqn_NewSavingsProject_page3.class));
+            startActivity(new Intent(Projectcreate_page2.this, Projectcreate_page3.class));
         }
     }
 

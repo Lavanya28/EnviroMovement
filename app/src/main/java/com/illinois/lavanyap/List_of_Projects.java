@@ -23,7 +23,7 @@ public class List_of_Projects extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), SecondActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), Resource_projectpage.class);
                 startActivity(startIntent);
 
 

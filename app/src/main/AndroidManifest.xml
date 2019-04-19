@@ -22,9 +22,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
          </activity>
-        <activity android:name=".WhatAreYouSaving_NewSavingsProject_page1" />
+        <activity android:name=".Projectcreate_page1" />
         <activity android:name=".MotivationDescription_NewSavingsProject_page2" />
-        <activity android:name=".MetricsCalculateSavingsEqn_NewSavingsProject_page3"></activity>
+        <activity android:name=".Projectcreate_page3"></activity>
     </application>
 
 </manifest>
