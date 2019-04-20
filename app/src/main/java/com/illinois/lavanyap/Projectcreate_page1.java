@@ -2,7 +2,6 @@ package  com.illinois.lavanyap;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +34,7 @@ public class Projectcreate_page1 extends Activity {
         Button create = (Button) findViewById(R.id.createprojectbutton);
 
         Bundle b = this.getIntent().getExtras();
-        String user = "'"+b.getString("username")+"'";
+        final String user = "'"+b.getString("username")+"'";
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,19 +46,23 @@ public class Projectcreate_page1 extends Activity {
                 String metric = "'"+ metrics.getText().toString()+ "'";
                 String activ = "'"+ active.getText().toString()+ "'";
                 String tot = "'"+ total.getText().toString()+ "'";
+                Integer int_total = Integer.parseInt(total.getText().toString());
+
 
                 //Insert values in table Project in database here
                 String Query = "INSERT INTO Project (ProjectID,ProjectName, ResourceType, Motivation, Metrics, Active, Total) VALUES ("+ pid+" , "+pname+" , "+rtype+" , "+motivate+" , " +metric+" , "+activ+" , "+tot+")";
                 mydatabase3.execSQL(Query);
 
-                //Insert values in table ProfileTable in database here
+
+                String Query2 = "INSERT INTO ProfileTable VALUES (" + user + " ,"+ pid +  " ," +tot + " ," + tot +")" ;
+                mydatabase3.execSQL(Query2);
 
 
 
-                Cursor cursor = mydatabase3.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
 
-                Intent startIntent = new Intent(Projectcreate_page1.this.getApplicationContext(), User_Profile.class);
-                Projectcreate_page1.this.startActivity(startIntent);
+
+                    Intent startIntent = new Intent(Projectcreate_page1.this.getApplicationContext(), User_Profile.class);
+                    Projectcreate_page1.this.startActivity(startIntent);
 
 
             }
