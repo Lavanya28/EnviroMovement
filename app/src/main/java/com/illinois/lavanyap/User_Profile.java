@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class User_Profile extends AppCompatActivity {
@@ -30,6 +32,7 @@ public class User_Profile extends AppCompatActivity {
 
         Button createproject = (Button) findViewById(R.id.createproject);
 
+        TextView projectlist = (TextView) findViewById(R.id.projectlist);
         //Ecopoints
         TextView ecopoints = (TextView) findViewById(R.id.ecopoints);
         //Total
@@ -63,7 +66,34 @@ public class User_Profile extends AppCompatActivity {
 
         total.setText(user_total.toString());
 
+        //Displaying project list
+        Cursor cursor2 = mydatabase2.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
+        cursor2.moveToFirst();
 
+        List<String> listofprojects = new ArrayList<>();
+
+        while (!cursor2.isAfterLast()) {
+
+            String val = "'"+ cursor2.getString(1)+"'";
+
+            Cursor c = mydatabase2.rawQuery("SELECT * from Project WHERE ProjectID = "+ val,null);
+            c.moveToFirst();
+            listofprojects.add(c.getString(1));
+
+
+            cursor2.moveToNext();
+
+
+        }
+
+        String listString = "";
+
+        for (String s : listofprojects)
+        {
+            listString += s + "\n";
+        }
+
+        projectlist.setText(listString);
 
 
 
