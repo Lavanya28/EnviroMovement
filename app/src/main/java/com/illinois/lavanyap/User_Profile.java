@@ -42,16 +42,26 @@ public class User_Profile extends AppCompatActivity {
         String user = "'"+b.getString("username")+"'";
 
 
-        //Fetch Eco points corresponding to User
+
          Cursor cursor = mydatabase2.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
          cursor.moveToFirst();
-         String eco = cursor.getString(2);
-         ecopoints.setText(eco);
 
-         //Fetch Total saved by User
-        String tot = cursor.getString(3);
-        total.setText(tot);
+        //Fetch Eco points and total corresponding to User
+        Integer user_total = 0;
 
+
+        while (!cursor.isAfterLast()) {
+
+            String val = cursor.getString(3);
+            user_total = user_total + Integer.parseInt(val);
+
+            cursor.moveToNext();
+
+
+        }
+
+
+        total.setText(user_total.toString());
 
 
 
