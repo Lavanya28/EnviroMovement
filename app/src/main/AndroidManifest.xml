@@ -11,10 +11,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Resource_Page" />
         <activity android:name=".User_Profile" />
-        <activity android:name=".ThirdActivity" />
         <activity android:name=".Ecotip" />
 
         <activity android:name=".List_of_Projects"/>
+        <activity android:name=".Resource_projectpage"/>
         <activity android:name=".Login">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

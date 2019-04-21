@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/misc_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/paper_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Joincampaign"
         app:srcCompat="@drawable/drop"
         tools:ignore="MissingConstraints" />
 
@@ -51,7 +51,7 @@
         android:scaleType="centerInside"
         app:layout_constraintEnd_toStartOf="@+id/water_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Joincampaign"
         app:srcCompat="@drawable/blankfile" />
 
     <ImageButton
@@ -87,7 +87,7 @@
         app:menu="@menu/nav" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Joincampaign"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"

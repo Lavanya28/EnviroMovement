@@ -1,14 +1,19 @@
 package com.illinois.lavanyap;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class List_of_Projects extends AppCompatActivity {
 
@@ -17,47 +22,231 @@ public class List_of_Projects extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_pro);
 
-        Button button1 = (Button) findViewById(R.id.button1);
+        final SQLiteDatabase mydatabase3 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        //set all buttons to invisible
+        final Button p1 = (Button) findViewById(R.id.Project1);
+        p1.setVisibility(View.GONE);
 
-            @Override
+        final Button p2 = (Button) findViewById(R.id.Project2);
+        p2.setVisibility(View.GONE);
+
+        final Button p3 = (Button) findViewById(R.id.Project3);
+        p3.setVisibility(View.GONE);
+
+        final Button p4 = (Button) findViewById(R.id.Project4);
+        p4.setVisibility(View.GONE);
+
+
+
+
+
+        //fetch from add extras what type of resource it is
+        Bundle b = this.getIntent().getExtras();
+        String resource_type = b.getString("resource");
+
+
+        if(resource_type.equals("plastic"))
+
+        {
+            //fetch all projects that are rtype plastic
+            Cursor cursor = mydatabase3.rawQuery("SELECT * from Project where ResourceType= 'Plastics' "  ,null);
+            cursor.moveToFirst();
+            ArrayList<String> projects = new ArrayList<>();
+
+            while (!cursor.isAfterLast()) {
+
+                String val = cursor.getString(1);
+                projects.add(val);
+
+                cursor.moveToNext();
+
+
+            }
+
+            Integer size = projects.size();
+
+            Integer c = 1;
+            while (c <= size)
+            {
+                if(c==1){
+                    p1.setText(projects.get(c-1));
+                    p1.setVisibility(View.VISIBLE);
+
+                }
+
+                if(c==2){
+                    p2.setText(projects.get(c-1));
+                    p2.setVisibility(View.VISIBLE);
+                }
+
+                if(c==3){
+                    p3.setText(projects.get(c-1));
+                    p3.setVisibility(View.VISIBLE);
+                }
+
+                if(c==4){
+                    p4.setText(projects.get(c-1));
+                    p4.setVisibility(View.VISIBLE);
+                }
+              c=c+1;
+            }
+
+
+
+
+
+        }
+
+        //Plastic ends here
+
+        // Water resource type begins here
+
+        if(resource_type.equals("water"))
+
+        {
+            //fetch all projects that are rtype plastic
+            Cursor cursor = mydatabase3.rawQuery("SELECT * from Project where ResourceType= 'Water' "  ,null);
+            cursor.moveToFirst();
+            ArrayList<String> projects = new ArrayList<>();
+
+            while (!cursor.isAfterLast()) {
+
+                String val = cursor.getString(1);
+                projects.add(val);
+
+                cursor.moveToNext();
+
+
+            }
+
+            Integer size = projects.size();
+
+            Integer c = 1;
+            while (c <= size)
+            {
+                if(c==1){
+                    p1.setText(projects.get(c-1));
+                    p1.setVisibility(View.VISIBLE);
+                }
+
+                if(c==2){
+                    p2.setText(projects.get(c-1));
+                    p2.setVisibility(View.VISIBLE);
+                }
+
+                if(c==3){
+                    p3.setText(projects.get(c-1));
+                    p3.setVisibility(View.VISIBLE);
+                }
+
+                if(c==4){
+                    p4.setText(projects.get(c-1));
+                    p4.setVisibility(View.VISIBLE);
+                }
+                c=c+1;
+            }
+
+
+
+
+
+        }
+
+        if(resource_type.equals("paper"))
+
+        {
+            //fetch all projects that are rtype plastic
+            Cursor cursor = mydatabase3.rawQuery("SELECT * from Project where ResourceType= 'Paper' "  ,null);
+            cursor.moveToFirst();
+            ArrayList<String> projects = new ArrayList<>();
+
+            while (!cursor.isAfterLast()) {
+
+                String val = cursor.getString(1);
+                projects.add(val);
+
+                cursor.moveToNext();
+
+
+            }
+            Log.d("CREATE", projects.get(0));
+            Integer size = projects.size();
+
+            Integer c = 1;
+            while (c <= size)
+            {
+                if(c==1){
+                    p1.setText(projects.get(c-1));
+                    p1.setVisibility(View.VISIBLE);
+                }
+
+                if(c==2){
+                    p2.setText(projects.get(c-1));
+                    p2.setVisibility(View.VISIBLE);
+                }
+
+                if(c==3){
+                    p3.setText(projects.get(c-1));
+                    p3.setVisibility(View.VISIBLE);
+                }
+
+                if(c==4){
+                    p4.setText(projects.get(c-1));
+                    p4.setVisibility(View.VISIBLE);
+                }
+                c=c+1;
+            }
+
+
+
+
+
+        }
+
+
+        p1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Resource_projectpage.class);
-                startActivity(startIntent);
-
-
+                Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
+                Intent project = startIntent.putExtra("project", p1.getText().toString());
+                List_of_Projects.this.startActivity(startIntent);
 
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button2);
-
-        button2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
+        p2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ThirdActivity.class);
-                startActivity(startIntent);
-
-
+                Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
+                Intent project = startIntent.putExtra("project", p2.getText().toString());
+                List_of_Projects.this.startActivity(startIntent);
 
             }
         });
 
-        Button ecotip = (Button) findViewById(R.id.ecotips);
-
-        ecotip.setOnClickListener(new View.OnClickListener() {
-            @Override
+        p3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Ecotip.class);
-                startActivity(startIntent);
-
-
-
+                Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
+                Intent project = startIntent.putExtra("project", p3.getText().toString());
+                List_of_Projects.this.startActivity(startIntent);
 
             }
         });
+
+        p4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
+                Intent project = startIntent.putExtra("project", p4.getText().toString());
+                List_of_Projects.this.startActivity(startIntent);
+
+            }
+        });
+
+
+
+        //onclick for ecotips make 4 pages corresponding to the resources
+
+
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
