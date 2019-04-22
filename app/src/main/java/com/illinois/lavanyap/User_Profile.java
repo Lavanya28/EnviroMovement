@@ -8,25 +8,41 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.mikephil.charting.charts.PieChart;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class User_Profile extends AppCompatActivity {
+    PieChart piechart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
+
+        //piechart
+        piechart = (PieChart) findViewById(R.id.pieChart);
+        //piechart.setDescription("User Total Contribution");
+        piechart.setRotationEnabled(true);
+
+
+
+
 
         final SQLiteDatabase mydatabase2 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
 
@@ -34,7 +50,7 @@ public class User_Profile extends AppCompatActivity {
 
         TextView projectlist = (TextView) findViewById(R.id.projectlist);
         //Ecopoints
-        TextView ecopoints = (TextView) findViewById(R.id.ecopoints);
+        //TextView ecopoints = (TextView) findViewById(R.id.ecopoints);
         //Total
         TextView total = (TextView) findViewById(R.id.totalsaved);
         //
@@ -110,7 +126,7 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -127,14 +143,47 @@ public class User_Profile extends AppCompatActivity {
                         resintent.putExtra("username", User);
                         startActivity(resintent);
                         break;
-                    case R.id.navigation_settings:
-                        Toast.makeText(User_Profile.this, "Settings", Toast.LENGTH_SHORT).show();
+                    case R.id.navigation_ecotips:
+                        Toast.makeText(User_Profile.this, "EcoTips", Toast.LENGTH_SHORT).show();
+                        Intent  ecotip = new Intent(getApplicationContext(), Ecotip.class);
+                        startActivity(ecotip);
                         break;
+                    case R.id.overflow:
+                        PopupMenu popup = new PopupMenu(User_Profile.this, findViewById(R.id.overflow));
+                        MenuInflater inflater = popup.getMenuInflater();
+                        inflater.inflate(R.menu.settings, popup.getMenu());
+                        popup.show();
+
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case R.id.help:
+                                        Toast.makeText(User_Profile.this, "Help", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.action_settings:
+                                        Toast.makeText(User_Profile.this, "Settings", Toast.LENGTH_SHORT).show();
+                                        Intent settingintent = new Intent(getApplicationContext(), SettingsActivity.class);
+                                        startActivity(settingintent);
+                                        break;
+                                    case R.id.info:
+                                        Toast.makeText(User_Profile.this, "Info", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.logout:
+                                        Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                                        startActivity(loginintent);
+                                        break;
+
+                                }
+                                return true;
+                            }
+                        });
+
                 }
 
-                return true;
+                return false;
             }
         });
+
 
 
 

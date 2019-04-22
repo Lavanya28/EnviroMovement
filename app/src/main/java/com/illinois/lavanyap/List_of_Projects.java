@@ -5,12 +5,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.MenuInflater;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -247,8 +253,8 @@ public class List_of_Projects extends AppCompatActivity {
 
 
 
-
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.navigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -263,14 +269,47 @@ public class List_of_Projects extends AppCompatActivity {
                         Intent  resintent = new Intent(getApplicationContext(), Resource_Page.class);
                         startActivity(resintent);
                         break;
-                    case R.id.navigation_settings:
-                        Toast.makeText(List_of_Projects.this, "Settings", Toast.LENGTH_SHORT).show();
+                    case R.id.navigation_ecotips:
+                        Toast.makeText(List_of_Projects.this, "EcoTips", Toast.LENGTH_SHORT).show();
+                        Intent  ecotip = new Intent(getApplicationContext(), Ecotip.class);
+                        startActivity(ecotip);
                         break;
+                    case R.id.overflow:
+                        PopupMenu popup = new PopupMenu(List_of_Projects.this, findViewById(R.id.overflow));
+                        MenuInflater inflater = popup.getMenuInflater();
+                        inflater.inflate(R.menu.settings, popup.getMenu());
+                        popup.show();
+
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case R.id.help:
+                                        Toast.makeText(List_of_Projects.this, "Help", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.action_settings:
+                                        Toast.makeText(List_of_Projects.this, "Settings", Toast.LENGTH_SHORT).show();
+                                        Intent settingintent = new Intent(getApplicationContext(), SettingsActivity.class);
+                                        startActivity(settingintent);
+                                        break;
+                                    case R.id.info:
+                                        Toast.makeText(List_of_Projects.this, "Info", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.logout:
+                                        Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                                        startActivity(loginintent);
+                                        break;
+
+                                }
+                                return true;
+                            }
+                        });
+
                 }
 
-                return true;
+                return false;
             }
         });
+
 
     }
 }
