@@ -43,9 +43,15 @@ public class User_Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile2);
 
 //        //piechart
+
         piechart = (PieChart) findViewById(R.id.pieChart);
         //piechart.setDescription("User Total Contribution");
         piechart.setRotationEnabled(true);
+
+          piechart = (PieChart) findViewById(R.id.pieChart);
+//        //piechart.setDescription("User Total Contribution");
+          piechart.setRotationEnabled(true);
+
 
         addDataSet(piechart);
 

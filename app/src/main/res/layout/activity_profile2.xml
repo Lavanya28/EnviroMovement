@@ -9,8 +9,8 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="17dp"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/colorPrimary"
         app:itemHorizontalTranslationEnabled="true"
@@ -23,214 +23,123 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createproject"
+        app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/nav">
 
     </android.support.design.widget.BottomNavigationView>
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChart"
-        android:layout_width="297dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="301dp"
-        android:layout_marginBottom="51dp"
+        android:layout_width="329dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602">
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.github.mikephil.charting.charts.PieChart>
 
     <TextView
         android:id="@+id/total"
-<<<<<<< HEAD
-        android:layout_width="123dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="8dp"
-=======
-        android:layout_width="116dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginLeft="78dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
-        android:layout_marginBottom="48dp"
->>>>>>> 25c888e6d34db6977b1e1d12acb70056eb195272
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
+        android:layout_marginBottom="30dp"
         android:text="EcoPoints"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
-<<<<<<< HEAD
-        app:layout_constraintEnd_toStartOf="@+id/totalsaved" />
-
-    <TextView
-        android:id="@+id/totalsaved"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginBottom="8dp"
-=======
         app:layout_constraintEnd_toStartOf="@+id/totalsaved"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
 
     <TextView
         android:id="@+id/totalsaved"
-        android:layout_width="61dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="402dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
-        android:layout_marginBottom="53dp"
->>>>>>> 25c888e6d34db6977b1e1d12acb70056eb195272
+        android:layout_width="44dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginRight="98dp"
+        android:layout_marginBottom="26dp"
         android:text="12"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="@+id/createproject" />
-=======
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/total"
-        app:layout_constraintTop_toTopOf="parent" />
->>>>>>> 25c888e6d34db6977b1e1d12acb70056eb195272
+        app:layout_constraintTop_toBottomOf="@+id/pieChart"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <Button
         android:id="@+id/createproject"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="158dp"
-<<<<<<< HEAD
-        android:layout_height="47dp"
-        android:layout_marginBottom="8dp"
-=======
-        android:layout_height="0dp"
-        android:layout_marginBottom="6dp"
->>>>>>> 25c888e6d34db6977b1e1d12acb70056eb195272
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/round_button_green"
         android:text="Create a Project"
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-=======
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalsaved" />
->>>>>>> 25c888e6d34db6977b1e1d12acb70056eb195272
+        app:layout_constraintTop_toBottomOf="@+id/total" />
 
-    <Button
-        android:id="@+id/up1"
-        android:layout_width="225dp"
-        android:layout_height="56dp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="395dp"
+        android:layout_height="157dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pieChart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/up2"
-        android:layout_width="224dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pieChart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/up3"
-        android:layout_width="227dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pieChart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+            <Button
+                android:id="@+id/up3"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:text="Button"
+                tools:layout_editor_absoluteX="131dp"
+                tools:layout_editor_absoluteY="175dp" />
 
-    <Button
-        android:id="@+id/up4"
-        android:layout_width="221dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pieChart"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+            <Button
+                android:id="@+id/up4"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:text="Button"
+                tools:layout_editor_absoluteX="139dp"
+                tools:layout_editor_absoluteY="242dp" />
+
+            <Button
+                android:id="@+id/up1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Button"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="56dp" />
+
+            <Button
+                android:id="@+id/up2"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:text="Button"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="113dp" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
