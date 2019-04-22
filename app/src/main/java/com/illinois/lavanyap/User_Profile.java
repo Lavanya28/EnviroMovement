@@ -8,49 +8,54 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.PopupMenu;
-import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.github.mikephil.charting.charts.PieChart;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class User_Profile extends AppCompatActivity {
-    PieChart piechart;
+    //PieChart piechart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-        //piechart
-        piechart = (PieChart) findViewById(R.id.pieChart);
-        //piechart.setDescription("User Total Contribution");
-        piechart.setRotationEnabled(true);
+//        //piechart
+//        piechart = (PieChart) findViewById(R.id.pieChart);
+//        //piechart.setDescription("User Total Contribution");
+//        piechart.setRotationEnabled(true);
 
 
+        //set all buttons to invisible
+        final Button p1 = (Button) findViewById(R.id.up1);
+        p1.setVisibility(View.GONE);
 
+        final Button p2 = (Button) findViewById(R.id.up2);
+        p2.setVisibility(View.GONE);
+
+        final Button p3 = (Button) findViewById(R.id.up3);
+        p3.setVisibility(View.GONE);
+
+        final Button p4 = (Button) findViewById(R.id.up4);
+        p4.setVisibility(View.GONE);
 
 
         final SQLiteDatabase mydatabase2 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
 
         Button createproject = (Button) findViewById(R.id.createproject);
 
-        TextView projectlist = (TextView) findViewById(R.id.projectlist);
         //Ecopoints
         //TextView ecopoints = (TextView) findViewById(R.id.ecopoints);
+
         //Total
         TextView total = (TextView) findViewById(R.id.totalsaved);
         //
@@ -103,14 +108,36 @@ public class User_Profile extends AppCompatActivity {
 
         }
 
-        String listString = "";
 
-        for (String s : listofprojects)
-        {
-            listString += s + "\n";
+        Integer countofprojects = listofprojects.size();
+        Log.d("CREATE",countofprojects.toString());
+
+        Integer c = 1;
+
+        while(c<=countofprojects){
+            if(c==1){
+                p1.setText(listofprojects.get(c-1));
+                p1.setVisibility(View.VISIBLE);
+
+            }
+
+            if(c==2){
+                p2.setText(listofprojects.get(c-1));
+                p2.setVisibility(View.VISIBLE);
+            }
+
+            if(c==3){
+                p3.setText(listofprojects.get(c-1));
+                p3.setVisibility(View.VISIBLE);
+            }
+
+            if(c==4){
+                p4.setText(listofprojects.get(c-1));
+                p4.setVisibility(View.VISIBLE);
+            }
+            c=c+1;
+
         }
-
-        projectlist.setText(listString);
 
 
 
@@ -146,6 +173,7 @@ public class User_Profile extends AppCompatActivity {
                     case R.id.navigation_ecotips:
                         Toast.makeText(User_Profile.this, "EcoTips", Toast.LENGTH_SHORT).show();
                         Intent  ecotip = new Intent(getApplicationContext(), Ecotip.class);
+                        ecotip.putExtra("username", User);
                         startActivity(ecotip);
                         break;
                     case R.id.overflow:
@@ -163,6 +191,7 @@ public class User_Profile extends AppCompatActivity {
                                     case R.id.action_settings:
                                         Toast.makeText(User_Profile.this, "Settings", Toast.LENGTH_SHORT).show();
                                         Intent settingintent = new Intent(getApplicationContext(), SettingsActivity.class);
+                                        settingintent.putExtra("username", User);
                                         startActivity(settingintent);
                                         break;
                                     case R.id.info:
@@ -170,6 +199,7 @@ public class User_Profile extends AppCompatActivity {
                                         break;
                                     case R.id.logout:
                                         Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                                        loginintent.putExtra("username", User);
                                         startActivity(loginintent);
                                         break;
 

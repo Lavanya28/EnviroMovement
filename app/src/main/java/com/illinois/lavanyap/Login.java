@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -49,7 +48,7 @@ public class Login extends Activity {
                 String user = "'"+username.getText().toString()+ "'";
                 final Intent  startIntent = new Intent(getApplicationContext(), User_Profile.class);
 
-                Cursor resultSet = mydatabase.rawQuery("Select * from UserTable where Username ="+user,null);
+                Cursor resultSet = mydatabase.rawQuery("Select * from UserTable where Username ="+"'Mary'",null);
 
                 //Log.d("CREATE","Inside");
                 resultSet.moveToFirst();
@@ -57,16 +56,15 @@ public class Login extends Activity {
                 String pass = resultSet.getString(1);
 
 
-                if(pass.equals(password.getText().toString()))
-                {
-                    startIntent.putExtra("username", username.getText().toString());
+//                if(pass.equals(password.getText().toString()))
+//                {
+//                    startIntent.putExtra("username", username.getText().toString());
+//                    startActivity(startIntent);
+//
+//                }
+
+                startIntent.putExtra("username", "Mary");
                     startActivity(startIntent);
-
-                }
-                startIntent.putExtra("username", username.getText().toString());
-//                startIntent.putExtra("username", "Mary");
-//                startActivity(startIntent);
-
 
 
             }

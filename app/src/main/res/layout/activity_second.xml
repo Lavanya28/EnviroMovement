@@ -56,42 +56,11 @@
         app:layout_constraintTop_toBottomOf="@+id/title1" />
 
     <TextView
-        android:id="@+id/title3"
-        android:layout_width="206dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Carry a paper bag for groceries"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title2" />
-
-    <TextView
-        android:id="@+id/title4"
-        android:layout_width="206dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Carry a paper bag for groceries"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title3" />
-
-    <TextView
         android:id="@+id/totalprojectsave"
         android:layout_width="237dp"
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -99,9 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title4"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv1"
@@ -119,42 +86,11 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
-        android:id="@+id/tv2"
-        android:layout_width="49dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
-        app:layout_constraintStart_toEndOf="@+id/title2"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <TextView
-        android:id="@+id/tv4"
-        android:layout_width="49dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toEndOf="@+id/title4"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <TextView
         android:id="@+id/total"
         android:layout_width="64dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="8dp"
@@ -162,82 +98,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.769"
-        app:layout_constraintStart_toEndOf="@+id/totalprojectsave"
-        app:layout_constraintTop_toBottomOf="@+id/tv4" />
-
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/tv1"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/tv2"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv3"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <Button
-        android:id="@+id/b4"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toEndOf="@+id/tv4"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="51dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toEndOf="@+id/title3"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintStart_toEndOf="@+id/totalprojectsave" />
 
 </android.support.constraint.ConstraintLayout>

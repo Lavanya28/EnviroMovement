@@ -35,34 +35,10 @@
 
     </com.github.mikephil.charting.charts.PieChart>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="394dp"
-        android:layout_height="146dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/navigationView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235">
-
-        <TextView
-            android:id="@+id/projectlist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:fontFamily="sans-serif-medium" />
-    </LinearLayout>
-
     <TextView
         android:id="@+id/total"
         android:layout_width="123dp"
         android:layout_height="30dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
@@ -71,9 +47,7 @@
         android:textSize="20sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
-        app:layout_constraintEnd_toStartOf="@+id/totalsaved"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintEnd_toStartOf="@+id/totalsaved" />
 
     <TextView
         android:id="@+id/totalsaved"
@@ -81,16 +55,13 @@
         android:layout_height="36dp"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="12"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
-        app:layout_constraintStart_toStartOf="@+id/createproject"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintStart_toStartOf="@+id/createproject" />
 
 
     <Button
@@ -98,15 +69,12 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="158dp"
         android:layout_height="47dp"
-        android:layout_marginTop="208dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/round_button_green"
         android:text="Create a Project"
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline8"
@@ -149,6 +117,74 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
+    <Button
+        android:id="@+id/up1"
+        android:layout_width="225dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pieChart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <Button
+        android:id="@+id/up2"
+        android:layout_width="224dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pieChart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199" />
+
+    <Button
+        android:id="@+id/up3"
+        android:layout_width="227dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pieChart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <Button
+        android:id="@+id/up4"
+        android:layout_width="221dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pieChart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
 
 
 </android.support.constraint.ConstraintLayout>
