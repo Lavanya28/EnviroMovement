@@ -17,17 +17,17 @@ public class Projectcreate_page1 extends Activity {
         setContentView(R.layout.projectcreate);
         final SQLiteDatabase mydatabase3 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
 
-        final EditText projectid = (EditText)findViewById(R.id.c_projectid);
+        //final EditText projectid = (EditText)findViewById(R.id.c_projectid);
 
         final EditText projectname = (EditText)findViewById(R.id.c_projectname);
 
-        final EditText resourcetype = (EditText)findViewById(R.id.c_resourcetype);
+        // EditText resourcetype = (EditText)findViewById(R.id.c_resourcetype);
 
         final EditText motivation = (EditText)findViewById(R.id.c_motivation);
 
         final EditText metrics = (EditText)findViewById(R.id.c_metrics);
 
-        final EditText active = (EditText)findViewById(R.id.c_active);
+        //final EditText active = (EditText)findViewById(R.id.c_active);
 
         final EditText total = (EditText)findViewById(R.id.c_total);
 
@@ -39,12 +39,12 @@ public class Projectcreate_page1 extends Activity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String pid = "'"+ projectid.getText().toString()+ "'";
+                String pid ="00000";
                 String pname = "'"+ projectname.getText().toString()+ "'";
-                String rtype = "'"+ resourcetype.getText().toString()+ "'";
+                String rtype = "Plastic";
                 String motivate = "'"+ motivation.getText().toString()+ "'";
                 String metric = "'"+ metrics.getText().toString()+ "'";
-                String activ = "'"+ active.getText().toString()+ "'";
+                String activ ="True";
                 String tot = "'"+ total.getText().toString()+ "'";
                 Integer int_total = Integer.parseInt(total.getText().toString());
 
