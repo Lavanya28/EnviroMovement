@@ -2,23 +2,51 @@ package com.illinois.lavanyap;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.widget.Toast;
+import android.support.v7.app.ActionBar;
 
 public class User_Profile extends AppCompatActivity {
+
+    private ActionBar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationView);
+        toolbar = getSupportActionBar();
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.navigationView);
+
+
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottomNavigation.getChildAt(0);
+        toolbar.setTitle("Profile");
+        for (int i = 0; i < menuView.getChildCount(); i++) {
+            final View iconView = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon);
+            final ViewGroup.LayoutParams layoutParams = iconView.getLayoutParams();
+            final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+            layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, displayMetrics);
+            layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, displayMetrics);
+            iconView.setLayoutParams(layoutParams);
+        }
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 switch (item.getItemId()) {
                     case R.id.navigation_profile:
                         Toast.makeText(User_Profile.this, "Profile", Toast.LENGTH_SHORT).show();
@@ -30,14 +58,47 @@ public class User_Profile extends AppCompatActivity {
                         Intent  resintent = new Intent(getApplicationContext(), Resource_Page.class);
                         startActivity(resintent);
                         break;
-                    case R.id.navigation_settings:
-                        Toast.makeText(User_Profile.this, "Settings", Toast.LENGTH_SHORT).show();
+                    case R.id.navigation_ecotips:
+                        Toast.makeText(User_Profile.this, "EcoTips", Toast.LENGTH_SHORT).show();
+                        Intent  ecotip = new Intent(getApplicationContext(), Ecotip.class);
+                        startActivity(ecotip);
                         break;
+                    case R.id.overflow:
+                        PopupMenu popup = new PopupMenu(User_Profile.this, findViewById(R.id.overflow));
+                        MenuInflater inflater = popup.getMenuInflater();
+                        inflater.inflate(R.menu.settings, popup.getMenu());
+                        popup.show();
+
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case R.id.help:
+                                        Toast.makeText(User_Profile.this, "Help", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.action_settings:
+                                        Toast.makeText(User_Profile.this, "Settings", Toast.LENGTH_SHORT).show();
+                                        Intent settingintent = new Intent(getApplicationContext(), SettingsActivity.class);
+                                        startActivity(settingintent);
+                                        break;
+                                    case R.id.info:
+                                        Toast.makeText(User_Profile.this, "Info", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case R.id.logout:
+                                        Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                                        startActivity(loginintent);
+                                        break;
+
+                                }
+                                return true;
+                            }
+                        });
+
                 }
 
-                return true;
+                return false;
             }
         });
+
     }
 }
 
