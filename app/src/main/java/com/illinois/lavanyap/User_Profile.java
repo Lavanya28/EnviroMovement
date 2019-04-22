@@ -4,6 +4,7 @@ package com.illinois.lavanyap;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -20,15 +21,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.github.mikephil.charting.charts.PieChart;
-
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class User_Profile extends AppCompatActivity {
     PieChart piechart;
+    Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,10 @@ public class User_Profile extends AppCompatActivity {
         piechart = (PieChart) findViewById(R.id.pieChart);
         //piechart.setDescription("User Total Contribution");
         piechart.setRotationEnabled(true);
+
+        addDataSet(piechart);
+
+
 
 
 
@@ -190,5 +199,38 @@ public class User_Profile extends AppCompatActivity {
 
 
     }
+
+    private void addDataSet(PieChart chart){
+        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+        ArrayList<String> xEntrys = new ArrayList<>();
+
+        for(int i = 0; i < 10  ; i++ )
+        {
+            yEntrys.add(new PieEntry(rand.nextInt(20)));
+            xEntrys.add("Mary");
+        }
+
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Project Contributions");
+        pieDataSet.setSliceSpace(2);
+        pieDataSet.setValueTextSize(12);
+
+        //add color to dataset
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.BLUE);
+
+        pieDataSet.setColors(colors);
+
+        //add lengend to chart
+
+        Legend legend = piechart.getLegend();
+        legend.setForm(Legend.LegendForm.CIRCLE);
+
+        //create pie data object
+        PieData pieData = new PieData(pieDataSet);
+        piechart.setData(pieData);
+        piechart.invalidate();
+
+    }
 }
+
 

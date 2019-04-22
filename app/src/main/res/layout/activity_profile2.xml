@@ -10,7 +10,7 @@
         android:id="@+id/navigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/colorPrimary"
         app:itemHorizontalTranslationEnabled="true"
@@ -22,16 +22,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createproject"
         app:menu="@menu/nav">
 
     </android.support.design.widget.BottomNavigationView>
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="297dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="301dp"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602">
 
     </com.github.mikephil.charting.charts.PieChart>
 
@@ -60,95 +66,51 @@
 
     <TextView
         android:id="@+id/total"
-        android:layout_width="123dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="116dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginLeft="78dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
+        android:layout_marginBottom="48dp"
         android:text="EcoPoints"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
         app:layout_constraintEnd_toStartOf="@+id/totalsaved"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/totalsaved"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="61dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:layout_marginBottom="53dp"
         android:text="12"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
-        app:layout_constraintStart_toStartOf="@+id/createproject"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/createproject"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="158dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/round_button_green"
         android:text="Create a Project"
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.871" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintTop_toBottomOf="@+id/totalsaved" />
 
 
 </android.support.constraint.ConstraintLayout>

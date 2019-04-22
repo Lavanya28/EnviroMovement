@@ -56,149 +56,158 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="419dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/createprojectbutton"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/New_Project"
-        app:layout_constraintVertical_bias="0.34">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/c_projectname"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
+        <LinearLayout
+            android:layout_width="402dp"
+            android:layout_height="339dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Enter Project Name"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.729"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.242" />
+            app:layout_constraintTop_toBottomOf="@+id/New_Project">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Select Project Resource Type"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:fontFamily="sans-serif-condensed-medium" />
+            <EditText
+                android:id="@+id/c_projectname"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Enter Project Name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.729"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.242" />
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="139dp">
-
-            <RadioButton
-                android:id="@+id/plastic_radio_button"
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Plastic" />
+                android:text="Select Project Resource Type"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:fontFamily="sans-serif-condensed-medium" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="139dp">
+
+                <RadioButton
+                    android:id="@+id/plastic_radio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plastic" />
 
 
-            <RadioButton
-                android:id="@+id/water_radio_button"
+                <RadioButton
+                    android:id="@+id/water_radio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Water" />
+
+                <RadioButton
+                    android:id="@+id/Paper_radio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paper" />
+
+                <RadioButton
+                    android:id="@+id/misc_radio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Misc" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/c_motivation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Water" />
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Enter Motivation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.729"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.499" />
 
-            <RadioButton
-                android:id="@+id/Paper_radio_button"
+            <EditText
+                android:id="@+id/c_metrics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Paper" />
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Enter Mertics"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.729"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.499" />
 
-            <RadioButton
-                android:id="@+id/misc_radio_button"
+            <EditText
+                android:id="@+id/c_total"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Misc" />
-        </RadioGroup>
-
-        <EditText
-            android:id="@+id/c_motivation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Enter Motivation"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.729"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
-
-        <EditText
-            android:id="@+id/c_metrics"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Enter Mertics"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.729"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
-
-        <EditText
-            android:id="@+id/c_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="number"
-            android:text="Enter Total Resources to be Saved "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.729"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.736" />
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Enter Total Resources to be Saved "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.729"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.736" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="16dp"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/colorPrimary"
         app:itemHorizontalTranslationEnabled="true"
@@ -210,36 +219,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createprojectbutton"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         app:layout_constraintVertical_bias="0.843"
         app:menu="@menu/nav" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="383dp" />
 
 </android.support.constraint.ConstraintLayout>
