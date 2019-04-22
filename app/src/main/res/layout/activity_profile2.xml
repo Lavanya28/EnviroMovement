@@ -25,11 +25,16 @@
         app:menu="@menu/nav">
 
     </android.support.design.widget.BottomNavigationView>
+
     <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.github.mikephil.charting.charts.PieChart>
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="394dp"
@@ -68,12 +73,14 @@
         app:layout_constraintBottom_toTopOf="@+id/createproject"
         app:layout_constraintEnd_toStartOf="@+id/totalsaved"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.807" />
 
     <TextView
         android:id="@+id/totalsaved"
         android:layout_width="72dp"
         android:layout_height="36dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="12"
@@ -81,9 +88,9 @@
         android:textSize="18sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@+id/createproject"
+        app:layout_constraintStart_toStartOf="@+id/createproject"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.906"
-        tools:layout_editor_absoluteX="245dp" />
+        app:layout_constraintVertical_bias="0.827" />
 
 
     <Button
@@ -96,9 +103,10 @@
         android:background="@drawable/round_button_green"
         android:text="Create a Project"
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.871"
-        tools:layout_editor_absoluteX="126dp" />
+        app:layout_constraintVertical_bias="0.871" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline8"

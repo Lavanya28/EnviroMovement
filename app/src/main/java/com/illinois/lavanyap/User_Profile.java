@@ -20,17 +20,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.mikephil.charting.charts.PieChart;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class User_Profile extends AppCompatActivity {
-
+    PieChart piechart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
+
+        //piechart
+        piechart = (PieChart) findViewById(R.id.pieChart);
+        //piechart.setDescription("User Total Contribution");
+        piechart.setRotationEnabled(true);
+
+
+
+
 
         final SQLiteDatabase mydatabase2 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
 
