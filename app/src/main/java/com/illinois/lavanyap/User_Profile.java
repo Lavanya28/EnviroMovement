@@ -67,6 +67,7 @@ public class User_Profile extends AppCompatActivity {
         // Fetch List of Projects, Eco-points, total  corresponding to user from Profile table
 
         Bundle b = this.getIntent().getExtras();
+        final String User = b.getString("username");
         String user = "'"+b.getString("username")+"'";
 
 
@@ -127,7 +128,7 @@ public class User_Profile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntent = new Intent(User_Profile.this.getApplicationContext(), Projectcreate_page1.class);
                 //CHANGE THIS TO USER
-                startIntent.putExtra("username", "Mary");
+                startIntent.putExtra("username", User);
                 User_Profile.this.startActivity(startIntent);
 
 
@@ -142,11 +143,13 @@ public class User_Profile extends AppCompatActivity {
                     case R.id.navigation_profile:
                         Toast.makeText(User_Profile.this, "Profile", Toast.LENGTH_SHORT).show();
                         Intent startIntent = new Intent(getApplicationContext(), User_Profile.class);
+                        startIntent.putExtra("username", User);
                         startActivity(startIntent);
                         break;
                     case R.id.navigation_resource:
                         Toast.makeText(User_Profile.this, "Resources", Toast.LENGTH_SHORT).show();
                         Intent  resintent = new Intent(getApplicationContext(), Resource_Page.class);
+                        resintent.putExtra("username", User);
                         startActivity(resintent);
                         break;
                     case R.id.navigation_ecotips:
