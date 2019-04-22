@@ -14,20 +14,19 @@
             android:label="@string/title_activity_settings"></activity>
         <activity android:name=".Resource_Page" />
         <activity android:name=".User_Profile" />
-        <activity android:name=".ThirdActivity" />
         <activity android:name=".Ecotip" />
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".List_of_Projects" />
-        <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".WhatAreYouSaving_NewSavingsProject_page1" />
-        <activity android:name=".MotivationDescription_NewSavingsProject_page2" />
-        <activity android:name=".MetricsCalculateSavingsEqn_NewSavingsProject_page3" />
+        <activity android:name=".List_of_Projects"/>
+        <activity android:name=".Resource_projectpage"/>
+        <activity android:name=".Login">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+         </activity>
+        <activity android:name=".Projectcreate_page1" />
+
     </application>
 
 </manifest>

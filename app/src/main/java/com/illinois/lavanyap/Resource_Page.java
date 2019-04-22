@@ -1,6 +1,7 @@
 package com.illinois.lavanyap;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
@@ -32,6 +33,7 @@ public class Resource_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(Resource_Page.this.getApplicationContext(), List_of_Projects.class);
+                startIntent.putExtra("resource", "water");
                 Resource_Page.this.startActivity(startIntent);
 
 
@@ -41,6 +43,7 @@ public class Resource_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(Resource_Page.this.getApplicationContext(), List_of_Projects.class);
+                startIntent.putExtra("resource", "plastic");
                 Resource_Page.this.startActivity(startIntent);
 
 
@@ -50,6 +53,8 @@ public class Resource_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(Resource_Page.this.getApplicationContext(), List_of_Projects.class);
+                startIntent.putExtra("resource", "paper");
+
                 Resource_Page.this.startActivity(startIntent);
 
 
@@ -59,6 +64,8 @@ public class Resource_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(Resource_Page.this.getApplicationContext(), List_of_Projects.class);
+                startIntent.putExtra("resource", "misc");
+
                 Resource_Page.this.startActivity(startIntent);
 
 
