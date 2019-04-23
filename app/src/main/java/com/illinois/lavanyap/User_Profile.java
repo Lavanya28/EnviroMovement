@@ -145,8 +145,10 @@ public class User_Profile extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent loginintent = new Intent(getApplicationContext(), Login.class);
-                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
+                        loginintent.putExtra("project", listofprojects.get(c_copy));
+                        loginintent.putExtra("username", User);
+
                         startActivity(loginintent);
 
 
@@ -163,7 +165,9 @@ public class User_Profile extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
-                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        loginintent.putExtra("project", listofprojects.get(c_copy));
+                        loginintent.putExtra("username", User);
+
                         startActivity(loginintent);
 
 
@@ -179,7 +183,9 @@ public class User_Profile extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
-                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        loginintent.putExtra("username", User);
+
+                        loginintent.putExtra("project", listofprojects.get(c_copy));
                         startActivity(loginintent);
 
 
@@ -195,7 +201,8 @@ public class User_Profile extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
-                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        loginintent.putExtra("username", User);
+                        loginintent.putExtra("project", listofprojects.get(c_copy));
                         startActivity(loginintent);
 
 

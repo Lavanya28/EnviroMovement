@@ -48,6 +48,9 @@ public class List_of_Projects extends AppCompatActivity {
         String resource_type = b.getString("resource");
 
 
+        final String user = b.getString("username");
+
+
         if(resource_type.equals("plastic"))
 
         {
@@ -210,7 +213,8 @@ public class List_of_Projects extends AppCompatActivity {
         p1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
-                Intent project = startIntent.putExtra("project", p1.getText().toString());
+                startIntent.putExtra("project", p1.getText().toString());
+                startIntent.putExtra("username", user);
                 List_of_Projects.this.startActivity(startIntent);
 
             }
@@ -219,7 +223,8 @@ public class List_of_Projects extends AppCompatActivity {
         p2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
-                Intent project = startIntent.putExtra("project", p2.getText().toString());
+                startIntent.putExtra("project", p2.getText().toString());
+                startIntent.putExtra("username", user);
                 List_of_Projects.this.startActivity(startIntent);
 
             }
@@ -228,7 +233,8 @@ public class List_of_Projects extends AppCompatActivity {
         p3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
-                Intent project = startIntent.putExtra("project", p3.getText().toString());
+                startIntent.putExtra("project", p3.getText().toString());
+                startIntent.putExtra("username", user);
                 List_of_Projects.this.startActivity(startIntent);
 
             }
@@ -237,7 +243,8 @@ public class List_of_Projects extends AppCompatActivity {
         p4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(List_of_Projects.this.getApplicationContext(), Resource_projectpage.class);
-                Intent project = startIntent.putExtra("project", p4.getText().toString());
+                startIntent.putExtra("project", p4.getText().toString());
+                startIntent.putExtra("username", user);
                 List_of_Projects.this.startActivity(startIntent);
 
             }

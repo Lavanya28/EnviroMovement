@@ -17,8 +17,8 @@ public class User_projectpage extends AppCompatActivity {
         setContentView(R.layout.activity_third);
 
         Bundle b = this.getIntent().getExtras();
-        String projecttitle = b.getString("project");
-
+        final String projecttitle = b.getString("project");
+        final String user = b.getString("username");
         //fetch title of project
 
         final TextView title = (TextView) findViewById(R.id.title_user);
@@ -36,13 +36,18 @@ public class User_projectpage extends AppCompatActivity {
         final Button increment = (Button) findViewById(R.id.buttonuser);
 
         final SQLiteDatabase mydatabase4 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
-        Cursor cursor = mydatabase4.rawQuery("SELECT * from Project where ProjectName=" +"'"+ projecttitle+"'" ,null);
+        final Cursor cursor = mydatabase4.rawQuery("SELECT * from Project where ProjectName=" +"'"+ projecttitle+"'" ,null);
 
         cursor.moveToFirst();
 
+        final String id = (cursor.getString(0));
         String motivation_text = cursor.getString(3);
         String metric_text = cursor.getString(4);
-        String total_text = cursor.getString(6);
+
+        Cursor cursor2 = mydatabase4.rawQuery("SELECT * from ProfileTable where Username=" + "'" + user + "'" + "and ProjectID=" + "'" + id+ "'"  , null);
+        cursor2.moveToFirst();
+
+        String total_text = cursor2.getString(3);
 
 
 
@@ -56,6 +61,11 @@ public class User_projectpage extends AppCompatActivity {
                 Integer count = Integer.parseInt(tot.getText().toString());
                 Integer new_count = count+1;
                 tot.setText(new_count.toString());
+                //update database both ProfileTable and Project here for user
+                mydatabase4.execSQL("UPDATE ProfileTable SET Total =" + "'" + new_count.toString() + "'" + " WHERE Username=" + "'" + user + "'" + "AND ProjectID=" + "'" + id+ "'");
+                Integer total = Integer.parseInt(cursor.getString(6));
+                total = total + new_count;
+                mydatabase4.execSQL("UPDATE Project SET Total =" + "'" + total.toString() + "'" + " WHERE ProjectName=" + "'" + projecttitle + "'" );
 
             }
         });

@@ -56,10 +56,10 @@
         android:text="Carry a paper bag for groceries"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintVertical_bias="0.605" />
 
     <TextView
         android:id="@+id/totalprojectsave"
@@ -74,10 +74,10 @@
         android:text="Total number of resource  saved"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.469" />
 
     <TextView
         android:id="@+id/total"
@@ -92,10 +92,10 @@
         android:text="23"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toEndOf="@+id/totalprojectsave"
         app:layout_constraintTop_toBottomOf="@+id/title2"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintVertical_bias="0.462" />
 
     <TextView
         android:id="@+id/contribute"
@@ -130,5 +130,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contribution"
         app:layout_constraintVertical_bias="0.362" />
+
+    <Button
+        android:id="@+id/joinproject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Join Project"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
 
 </android.support.constraint.ConstraintLayout>
