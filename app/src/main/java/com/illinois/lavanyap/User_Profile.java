@@ -115,7 +115,7 @@ public class User_Profile extends AppCompatActivity {
         Cursor cursor2 = mydatabase2.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
         cursor2.moveToFirst();
 
-        List<String> listofprojects = new ArrayList<>();
+        final List<String> listofprojects = new ArrayList<>();
 
         while (!cursor2.isAfterLast()) {
 
@@ -140,9 +140,14 @@ public class User_Profile extends AppCompatActivity {
         while(c<=countofprojects){
             if(c==1){
                 p1.setText(listofprojects.get(c-1));
+                final Integer c_copy = c-1;
                 p1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        startActivity(loginintent);
 
 
                     }
@@ -153,9 +158,13 @@ public class User_Profile extends AppCompatActivity {
 
             if(c==2){
                 p2.setText(listofprojects.get(c-1));
+                final Integer c_copy = c-1;
                 p2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
+                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        startActivity(loginintent);
 
 
                     }
@@ -165,9 +174,13 @@ public class User_Profile extends AppCompatActivity {
 
             if(c==3){
                 p3.setText(listofprojects.get(c-1));
+                final Integer c_copy = c-1;
                 p3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
+                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        startActivity(loginintent);
 
 
                     }
@@ -177,9 +190,13 @@ public class User_Profile extends AppCompatActivity {
 
             if(c==4){
                 p4.setText(listofprojects.get(c-1));
+                final Integer c_copy = c-1;
                 p4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Intent loginintent = new Intent(getApplicationContext(), User_projectpage.class);
+                        loginintent.putExtra("project", listofprojects.get(c_copy-1));
+                        startActivity(loginintent);
 
 
                     }

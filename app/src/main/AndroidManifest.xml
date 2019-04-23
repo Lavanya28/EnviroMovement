@@ -16,6 +16,8 @@
         <activity android:name=".User_Profile" />
         <activity android:name=".Ecotip" />
 
+        <activity android:name=".User_projectpage" />
+
         <activity android:name=".List_of_Projects"/>
         <activity android:name=".Resource_projectpage"/>
         <activity android:name=".Login">
