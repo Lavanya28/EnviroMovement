@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class Resource_projectpage extends AppCompatActivity {
+public class User_projectpage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,3 +54,4 @@ public class Resource_projectpage extends AppCompatActivity {
 
     }
 }
+

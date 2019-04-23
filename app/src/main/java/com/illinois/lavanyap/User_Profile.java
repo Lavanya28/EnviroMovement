@@ -140,22 +140,50 @@ public class User_Profile extends AppCompatActivity {
         while(c<=countofprojects){
             if(c==1){
                 p1.setText(listofprojects.get(c-1));
+                p1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                    }
+                });
                 p1.setVisibility(View.VISIBLE);
 
             }
 
             if(c==2){
                 p2.setText(listofprojects.get(c-1));
+                p2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                    }
+                });
                 p2.setVisibility(View.VISIBLE);
             }
 
             if(c==3){
                 p3.setText(listofprojects.get(c-1));
+                p3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                    }
+                });
                 p3.setVisibility(View.VISIBLE);
             }
 
             if(c==4){
                 p4.setText(listofprojects.get(c-1));
+                p4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                    }
+                });
                 p4.setVisibility(View.VISIBLE);
             }
             c=c+1;
