@@ -33,6 +33,7 @@ public class Resource_projectpage extends AppCompatActivity {
         final TextView tot = (TextView) findViewById(R.id.total);
 
         final TextView metric = (TextView) findViewById(R.id.contribution);
+        final TextView motiv = (TextView)findViewById(R.id.contribute);
         final TextView motivation = (TextView) findViewById(R.id.title2);
 
         final SQLiteDatabase mydatabase4 = openOrCreateDatabase("enviromovement",MODE_PRIVATE,null);
@@ -48,6 +49,7 @@ public class Resource_projectpage extends AppCompatActivity {
 
         metric.setText(metric_text);
         motivation.setText(motivation_text);
+        motiv.setText(motivation_text);
         tot.setText(total_text);
 
         joinproject.setOnClickListener(new View.OnClickListener() {
