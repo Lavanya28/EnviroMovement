@@ -27,7 +27,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
          </activity>
-        <activity android:name=".Projectcreate_page1" />
+        <activity
+            android:name=".Projectcreate_page1"
+            android:windowSoftInputMode="adjustPan"/>
 
     </application>
 

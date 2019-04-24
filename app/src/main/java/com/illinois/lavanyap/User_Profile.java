@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuInflater;
@@ -25,6 +26,8 @@ import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+
+
 import java.util.Random;
 
 import java.util.ArrayList;
@@ -42,13 +45,11 @@ public class User_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-
+           //Pie Chart
           piechart = (PieChart) findViewById(R.id.pieChart);
-//        //piechart.setDescription("User Total Contribution");
+          piechart.getDescription().setEnabled(false);
           piechart.setRotationEnabled(true);
-
-
-        addDataSet(piechart);
+          addDataSet();
 
 
         //set all buttons to invisible
@@ -285,32 +286,29 @@ public class User_Profile extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
     }
 
-    private void addDataSet(PieChart chart){
+    private void addDataSet(){
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         ArrayList<String> xEntrys = new ArrayList<>();
 
-        for(int i = 0; i < 10  ; i++ )
+        for(int i = 0; i < 3  ; i++ )
         {
             yEntrys.add(new PieEntry(rand.nextInt(20)));
-            xEntrys.add("Mary");
-        }
 
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Project Contributions");
+        }
+        xEntrys.add("Take Your Car the Car Wash");
+        xEntrys.add("Bring Your Own Mug");
+        xEntrys.add("Carry Eco-Bag To Shop");
+
+        PieDataSet pieDataSet = new PieDataSet(yEntrys,"");
         pieDataSet.setSliceSpace(2);
-        pieDataSet.setValueTextSize(12);
+        pieDataSet.setValueTextSize(15);
 
         //add color to dataset
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.GREEN);
+        colors.add(Color.rgb(90,200,225));
+        colors.add(Color.rgb(207,246,237));
 
         pieDataSet.setColors(colors);
 

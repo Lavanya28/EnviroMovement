@@ -5,4 +5,9 @@
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
     <color name="grey">#999999</color>
+    <color name="water">#5FBDE1</color>
+    <color name="plastic">#CFF6ED</color>
+
+
+
 </resources>
