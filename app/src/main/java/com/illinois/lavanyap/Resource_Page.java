@@ -21,7 +21,7 @@ public class Resource_Page extends AppCompatActivity {
 
         ImageButton water_button = findViewById(R.id.water_button);
         ImageButton paper_button = findViewById(R.id.paper_button);
-        ImageButton plastic_button = findViewById(R.id.platic_button);
+        ImageButton plastic_button = findViewById(R.id.plastic_button);
         ImageButton misc_button = findViewById(R.id.misc_button);
 
 

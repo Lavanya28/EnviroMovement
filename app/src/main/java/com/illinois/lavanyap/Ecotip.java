@@ -5,6 +5,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.MenuInflater;
@@ -12,15 +15,29 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class Ecotip extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_ecotip);
+        //Links to outside articles
+
+        TextView plasticlink = (TextView) findViewById(R.id.plastic_link);
+        TextView waterlink = (TextView) findViewById(R.id.water_link);
+        TextView misclink = (TextView) findViewById(R.id.misc_link);
+        TextView paperlink = (TextView) findViewById(R.id.paper_link);
+        plasticlink.setMovementMethod(LinkMovementMethod.getInstance());
+        waterlink.setMovementMethod(LinkMovementMethod.getInstance());
+        misclink.setMovementMethod(LinkMovementMethod.getInstance());
+        paperlink.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView6);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

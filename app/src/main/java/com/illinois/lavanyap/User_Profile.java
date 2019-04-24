@@ -42,11 +42,6 @@ public class User_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
-//        //piechart
-
-        piechart = (PieChart) findViewById(R.id.pieChart);
-        //piechart.setDescription("User Total Contribution");
-        piechart.setRotationEnabled(true);
 
           piechart = (PieChart) findViewById(R.id.pieChart);
 //        //piechart.setDescription("User Total Contribution");
@@ -54,8 +49,6 @@ public class User_Profile extends AppCompatActivity {
 
 
         addDataSet(piechart);
-
-
 
 
         //set all buttons to invisible
@@ -89,7 +82,9 @@ public class User_Profile extends AppCompatActivity {
         final String User = b.getString("username");
         String user = "'"+b.getString("username")+"'";
 
-
+        //Username Display
+        TextView user_profile_name=(TextView) findViewById(R.id.username_profile);
+        user_profile_name.setText("Hello " +User+"!");
 
          Cursor cursor = mydatabase2.rawQuery("SELECT * from ProfileTable where Username="+user  ,null);
          cursor.moveToFirst();
@@ -315,7 +310,7 @@ public class User_Profile extends AppCompatActivity {
 
         //add color to dataset
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.BLUE);
+        colors.add(Color.GREEN);
 
         pieDataSet.setColors(colors);
 

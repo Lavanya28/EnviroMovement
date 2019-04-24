@@ -182,5 +182,37 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <!--EcoTips-->
+    <string name="water_link"><a href="https://www.americanrivers.org/rivers/discover-your-river/top-10-ways-for-you-to-save-water-at-home/?gclid=CjwKCAjw7_rlBRBaEiwAc23rhgy_qT5XfeTvdmbgOwbFaNJXvFJVCeFzA5CcQuHLCzjfmZfXhu67fRoCrx0QAvD_BwE">Read More</a></string>
+    <string-array name="water_ecotips">
+        <item>Turn off the faucet while brushing your teeth.</item>
+        <item>Only run the washing machine and dishwasher when you have a full load.</item>
+        <item>Use a low flow shower head and faucet aerators.</item>
+        <item>Fix leaks.</item>
+        <item>Install a dual flush or low flow toilet or put a conversion kit on your existing toilet.</item>
+    </string-array>
+    <string name="plastic_link"><a href="https://www.treehugger.com/green-home/11-easy-ways-reduce-your-plastic-waste-today.html">Read More</a></string>
+    <string-array name="platic_ecotips">
+        <item>Bring your own shopping bag</item>
+        <item>Stop buying bottled water</item>
+        <item>Bring your own thermos to the coffee shop</item>
+        <item>Choose cardboard over plastic bottles and bags</item>
+        <item>Say no to straws</item>
+    </string-array>
+    <string name="paper_link"><a href="https://wwf.panda.org/get_involved/live_green/fsc/save_paper/office_paper/">Read More</a></string>
+    <string-array name="paper_ecotip">
+        <item>Use both sides of the sheet of paper</item>
+        <item>Avoid printing out single line e-mails or unnecessary copies of documents</item>
+        <item>Use technology</item>
+        <item>Recycle the paper you have and ask for recycled paper products</item>
+        <item>Save paper in your workplace</item>
+    </string-array>
+    <string name="misc_link"><a href="https://science.howstuffworks.com/environmental/green-science/save-earth-top-ten.htm">Read More</a></string>
+    <string-array name="misc_ecotip">
+        <item>Recycle.</item>
+        <item>Leave your car at home. </item>
+        <item>Compost.</item>
+        <item> Walk or ride your bike to work, school and anywhere you can.</item>
+    </string-array>
 
 </resources>

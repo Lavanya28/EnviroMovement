@@ -6,103 +6,156 @@
     android:layout_height="match_parent"
     tools:context=".Resource_Page">
 
-    <ImageButton
-        android:id="@+id/water_button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="47dp"
-        android:background="@null"
-        android:contentDescription="@string/water"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/misc_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/platic_button"
-        app:layout_constraintTop_toBottomOf="@+id/Joincampaign"
-        app:srcCompat="@drawable/drop"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/platic_button"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginRight="69dp"
-        android:background="@null"
-        android:contentDescription="@string/plastic"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/water_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Joincampaign"
-        app:srcCompat="@drawable/plasticbottle" />
-
-    <ImageButton
-        android:id="@+id/paper_button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:background="@null"
-        android:contentDescription="@string/paper"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/misc_button"
-        app:layout_constraintEnd_toStartOf="@+id/misc_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/misc_button"
-        app:srcCompat="@drawable/blankfile" />
-
-    <ImageButton
-        android:id="@+id/misc_button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="141dp"
-        android:background="@null"
-        android:contentDescription="TODO"
-        android:scaleType="centerInside"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
         app:layout_constraintBottom_toTopOf="@+id/navigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/paper_button"
-        app:layout_constraintTop_toBottomOf="@+id/water_button"
-        app:srcCompat="@drawable/triangular" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Joincampaign">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/plastic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:contentDescription="@string/plastic"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/plasticbottle" />
+
+            <ImageButton
+                android:id="@+id/water_button"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:contentDescription="@string/water"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/drop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textview9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="Plastic"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="Water"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif-black" />
+
+
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="60dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/paper_button"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:contentDescription="@string/paper"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/blankfile" />
+
+            <ImageButton
+                android:id="@+id/misc_button"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/triangular" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textview13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="Paper"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="More Projects"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif-black" />
+        </TableRow>
+    </TableLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationView"
-        android:layout_width="375dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/misc_button"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
         app:menu="@menu/nav" />
 
     <TextView
         android:id="@+id/Joincampaign"
-        android:layout_width="0dp"
+        android:layout_width="296dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/pick_your_resource"
         android:textAlignment="center"
@@ -111,9 +164,9 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:fontFamily="sans-serif-smallcaps"
-        app:layout_constraintBottom_toTopOf="@+id/water_button"
-        app:layout_constraintEnd_toEndOf="@+id/water_button"
-        app:layout_constraintStart_toStartOf="@+id/platic_button"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

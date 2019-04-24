@@ -6,11 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".User_Profile">
 
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginBottom="99dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_profile">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="156dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_weight="1">
+
+                </com.github.mikephil.charting.charts.PieChart>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="EcoPoints"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:fontFamily="sans-serif-black" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/totalsaved"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/createproject"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="11dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_green"
+                    android:text="Create a Project" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationView"
-        android:layout_width="0dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/colorPrimary"
         app:itemHorizontalTranslationEnabled="true"
@@ -18,79 +106,15 @@
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createproject"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView5"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/nav">
 
     </android.support.design.widget.BottomNavigationView>
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pieChart"
-        android:layout_width="329dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="236dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/total"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.github.mikephil.charting.charts.PieChart>
-
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="0dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="30dp"
-        android:text="EcoPoints"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toTopOf="@+id/createproject"
-        app:layout_constraintEnd_toStartOf="@+id/totalsaved"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pieChart" />
-
-
-    <TextView
-        android:id="@+id/totalsaved"
-        android:layout_width="44dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginBottom="26dp"
-        android:text="12"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toTopOf="@+id/createproject"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/total"
-        app:layout_constraintTop_toBottomOf="@+id/pieChart"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <Button
-        android:id="@+id/createproject"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="158dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="11dp"
-        android:background="@drawable/round_button_green"
-        android:text="Create a Project"
-        app:layout_constraintBottom_toTopOf="@+id/navigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -111,35 +135,71 @@
                 android:id="@+id/up3"
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
+                android:background="@null"
                 android:text="Button"
                 tools:layout_editor_absoluteX="131dp"
                 tools:layout_editor_absoluteY="175dp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
 
             <Button
                 android:id="@+id/up4"
                 android:layout_width="match_parent"
                 android:layout_height="59dp"
+                android:background="@null"
                 android:text="Button"
                 tools:layout_editor_absoluteX="139dp"
                 tools:layout_editor_absoluteY="242dp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
 
             <Button
                 android:id="@+id/up1"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:background="@null"
                 android:text="Button"
                 tools:layout_editor_absoluteX="132dp"
                 tools:layout_editor_absoluteY="56dp" />
 
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
             <Button
                 android:id="@+id/up2"
                 android:layout_width="match_parent"
-                android:layout_height="59dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="Button"
                 tools:layout_editor_absoluteX="132dp"
                 tools:layout_editor_absoluteY="113dp" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/username_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
