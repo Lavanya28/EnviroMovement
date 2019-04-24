@@ -56,15 +56,14 @@ public class Login extends Activity {
                 String pass = resultSet.getString(1);
 
 
-//                if(pass.equals(password.getText().toString()))
-//                {
-//                    startIntent.putExtra("username", username.getText().toString());
-//                    startActivity(startIntent);
-//
-//                }
-
-                startIntent.putExtra("username", "Mary");
+                if(pass.equals(password.getText().toString()))
+                {
+                    startIntent.putExtra("username", username.getText().toString());
                     startActivity(startIntent);
+
+                }
+
+
 
 
             }

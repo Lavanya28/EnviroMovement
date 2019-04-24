@@ -265,16 +265,19 @@ public class List_of_Projects extends AppCompatActivity {
                     case R.id.navigation_profile:
                         Toast.makeText(List_of_Projects.this, "Profile", Toast.LENGTH_SHORT).show();
                         Intent startIntent = new Intent(getApplicationContext(), User_Profile.class);
+                        startIntent.putExtra("username", user);
                         startActivity(startIntent);
                         break;
                     case R.id.navigation_resource:
                         Toast.makeText(List_of_Projects.this, "Resources", Toast.LENGTH_SHORT).show();
                         Intent  resintent = new Intent(getApplicationContext(), Resource_Page.class);
+                        resintent.putExtra("username", user);
                         startActivity(resintent);
                         break;
                     case R.id.navigation_ecotips:
                         Toast.makeText(List_of_Projects.this, "EcoTips", Toast.LENGTH_SHORT).show();
                         Intent  ecotip = new Intent(getApplicationContext(), Ecotip.class);
+                        ecotip.putExtra("username", user);
                         startActivity(ecotip);
                         break;
                     case R.id.overflow:
