@@ -256,7 +256,7 @@ public class List_of_Projects extends AppCompatActivity {
 
 
 
-        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.navigationView);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -10,7 +10,7 @@
         android:id="@+id/navigationView6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="12dp"
         app:itemBackground="@color/colorPrimary"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconTint="@color/white"
@@ -22,24 +22,203 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
         app:menu="@menu/nav" />
 
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="114dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginBottom="525dp"
-        android:lineSpacingExtra="30sp"
+        android:id="@+id/textView2"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="8dp"
         android:text="EcoTips"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:fontFamily="sans-serif-smallcaps"
-        app:layout_constraintBottom_toTopOf="@+id/navigationView6"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigationView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"><![CDATA[>
+
+            ]]>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Turn off the faucet while brushing your teeth." />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Only run the washing machine and dishwasher when you have a full load." />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use a low flow shower head and faucet aerators. " />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fix leaks. " />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Install a dual flush or low flow toilet or put a conversion kit on your existing toilet." />
+
+            <TextView
+                android:id="@+id/water_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/water_link"
+
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plastic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bring your own shopping bag" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop buying bottled water" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bring your own thermos to the coffee shop" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose cardboard over plastic bottles and bags" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Say no to straws" />
+
+            <TextView
+                android:id="@+id/plastic_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plastic_link"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paper"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use both sides of the sheet of paper " />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avoid printing out single line e-mails or unnecessary copies of documents" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use technology" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recycle the paper you have and ask for recycled paper products" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save paper in your workplace" />
+
+            <TextView
+                android:id="@+id/paper_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paper_link" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Misc"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Recycle." />
+
+            <TextView
+                android:id="@+id/misc_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/misc_link"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
